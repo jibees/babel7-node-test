@@ -1,0 +1,30 @@
+{
+  "name": "babel7-node-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jibees/babel7-node-test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jibees/babel7-node-test/issues"
+  },
+  "homepage": "https://github.com/jibees/babel7-node-test#readme",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/node": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "babel-plugin-module-resolver": "^3.1.1"
+  }
+}
