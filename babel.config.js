@@ -3,10 +3,20 @@ module.exports = function(api) {
   api.cache(false);
 
   const presets = ["@babel/preset-env"];
-  const plugins = [];
+  const plugins = [
+    [
+      "module-resolver",
+      {
+        cwd: "packagejson",
+        root: "./",
+        alias: {
+          "@package1": "./packages/package-1"
+        }
+      }
+    ]
+  ];
   return {
     presets,
-
     plugins
   };
 };
