@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "babel-node --config-file ../../babel.config.js ./index.js",
+    "dev": "babel-node --ignore=' ' --config-file ../../babel.config.js ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
