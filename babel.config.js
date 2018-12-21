@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = function(api) {
   console.log("🗼 Load babel config");
   api.cache(false);
@@ -7,10 +9,13 @@ module.exports = function(api) {
     [
       "module-resolver",
       {
-        cwd: "packagejson",
-        root: "./",
-        alias: {
-          "@package1": "./packages/package-1"
+        resolvePath(sourcePath) {
+          switch (sourcePath) {
+            case "@package1":
+              return path.resolve(__dirname, "packages/package-1");
+            default:
+              console.log(sourcePath);
+          }
         }
       }
     ]
