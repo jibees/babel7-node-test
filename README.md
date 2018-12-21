@@ -5,7 +5,4 @@ $ yarn ## npm install
 $ cd packages/package-2
 $ yarn dev ## npm run dev
 ```
-
-and see the error :
-
-`Error: Cannot find module './packages/package-1'`
+Solution has been found, see https://github.com/tleunen/babel-plugin-module-resolver/issues/338 ;)
