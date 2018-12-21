@@ -1,11 +1,23 @@
 module.exports = function(api) {
   console.log("🗼 Load babel config");
-  api.cache(true);
+  api.cache(false);
 
   const presets = ["@babel/preset-env"];
-  const plugins = ["@babel/plugin-transform-runtime"];
+  const plugins = [
+    [
+      "module-resolver",
+      {
+        cwd: "packagejson",
+        root: "./",
+        alias: {
+          "@package1": "./packages/package-1"
+        }
+      }
+    ]
+  ];
   return {
     presets,
+
     plugins
   };
 };
